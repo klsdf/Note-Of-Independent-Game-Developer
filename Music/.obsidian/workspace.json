@@ -18,19 +18,36 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "4041c570ed5412a9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "和弦.md",
+                "mode": "source",
+                "source": true
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
-        "id": "3c9048882363316c",
+        "id": "18137fec5805e4df",
         "type": "tabs",
         "children": [
           {
-            "id": "d06af7a78cd498d9",
+            "id": "cbdfd08eb364b7f5",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "和弦.md",
+                "mode": "preview",
+                "source": false
+              }
             }
           }
         ]
@@ -99,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Welcome.md",
+                "file": "和弦.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Welcome.md",
+                "file": "和弦.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Welcome.md"
+                "file": "和弦.md"
               }
             }
           }
@@ -160,8 +177,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "1a47354e395ddb67",
+  "active": "4041c570ed5412a9",
   "lastOpenFiles": [
+    "和弦.md",
     "Welcome.md"
   ]
 }
