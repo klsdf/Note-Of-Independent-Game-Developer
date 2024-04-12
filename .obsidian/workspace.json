@@ -1,0 +1,165 @@
+{
+  "main": {
+    "id": "2fc22e343986e8e4",
+    "type": "split",
+    "children": [
+      {
+        "id": "9b51220a3ffea940",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "00bf889c76c5258e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "GameDesign/RPG游戏调研.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "289622fef59cbb0b",
+    "type": "split",
+    "children": [
+      {
+        "id": "6fcd2d643855c222",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c4c8a921720ece7c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "4a10cd2ef3692b35",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "d7d481962bbd1559",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8dfcd87bf909f162",
+    "type": "split",
+    "children": [
+      {
+        "id": "49ee7a07bfd442d8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3c595f1f060f6807",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "GameDesign/RPG游戏调研.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "537d4c0686be80e7",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "GameDesign/RPG游戏调研.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d9bb370fdb3d7938",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "b79b0f9494d05308",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "GameDesign/RPG游戏调研.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "00bf889c76c5258e",
+  "lastOpenFiles": [
+    "GameDesign/GMT理论.md",
+    "GameDesign/RPG游戏调研.md",
+    "GameDesign/音游中的音符命名.md",
+    "GameDesign/数值公式.md",
+    "GameDesign/杀戮尖塔.md",
+    "Develop/unity代码模板.md",
+    "Develop/安卓开发.md",
+    "GameDesign/未命名.md",
+    "GameDesign/create a link.md",
+    "Music/和弦.md",
+    "Music/Welcome.md",
+    "GameDesign/未命名.canvas",
+    "Music/2024-04-11.md",
+    "README.md"
+  ]
+}
