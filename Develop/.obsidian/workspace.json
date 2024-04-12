@@ -18,6 +18,18 @@
                 "source": true
               }
             }
+          },
+          {
+            "id": "743d10af39a997c1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "安卓开发.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ]
       }
@@ -75,8 +87,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -159,8 +170,8 @@
   },
   "active": "dc6336a063706fbd",
   "lastOpenFiles": [
+    "安卓开发.md",
     "unity代码模板.md",
-    "未命名.md",
     "Welcome.md"
   ]
 }

@@ -1,57 +1,87 @@
 {
   "main": {
-    "id": "d076b0c9d5ccd04f",
+    "id": "a38cccf82ae947b0",
     "type": "split",
     "children": [
       {
-        "id": "ba6db8279f447735",
+        "id": "6081f8f951cbc7b8",
         "type": "tabs",
         "children": [
           {
-            "id": "1a47354e395ddb67",
+            "id": "a689410597c47eab",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "杀戮尖塔.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.13168724279835398,
+                  "close": false
+                }
+              }
+            }
+          },
+          {
+            "id": "9173d19310da93b9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Welcome.md",
+                "file": "GMT理论.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4a71d31d911d12dc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "杀戮尖塔.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
-      },
-      {
-        "id": "18137fec5805e4df",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "cbdfd08eb364b7f5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "和弦.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "96685641a8dc44ce",
+    "id": "027a38dc80d50748",
     "type": "split",
     "children": [
       {
-        "id": "17ae7992b706c08e",
+        "id": "28329585216c36e1",
         "type": "tabs",
         "children": [
           {
-            "id": "45d2671af5068649",
+            "id": "3e82607b3218fd68",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -61,7 +91,7 @@
             }
           },
           {
-            "id": "5a0e4607d81f5b21",
+            "id": "1d5533b0404b3355",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -76,35 +106,44 @@
             }
           },
           {
-            "id": "98a9967b5864e62f",
+            "id": "ffb8d0c86dd1fd30",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
               "state": {}
+            }
+          },
+          {
+            "id": "9838e479bf869f59",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "杀戮尖塔.md"
+              }
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
-    "id": "e75f74e2e331c919",
+    "id": "0a6110e6b3cda07c",
     "type": "split",
     "children": [
       {
-        "id": "279ca63f53760b2b",
+        "id": "1e092cd985ef8aed",
         "type": "tabs",
         "children": [
           {
-            "id": "3779c880710e5e85",
+            "id": "44dbec54fef2724d",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Welcome.md",
+                "file": "杀戮尖塔.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,19 +155,19 @@
             }
           },
           {
-            "id": "186d21f9de976aee",
+            "id": "00613bdd7fbc62bb",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Welcome.md",
+                "file": "杀戮尖塔.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "c61ce352ec360382",
+            "id": "808508472ef7ad8e",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -139,12 +178,12 @@
             }
           },
           {
-            "id": "d5e56361357ac562",
+            "id": "df1984e59d1bc74b",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Welcome.md"
+                "file": "杀戮尖塔.md"
               }
             }
           }
@@ -165,10 +204,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "1a47354e395ddb67",
+  "active": "4a71d31d911d12dc",
   "lastOpenFiles": [
-    "2024-04-11.md",
-    "和弦.md",
-    "Welcome.md"
+    "GMT理论.md",
+    "杀戮尖塔.md",
+    "未命名.canvas",
+    "create a link.md",
+    "音游中的音符命名.md"
   ]
 }
