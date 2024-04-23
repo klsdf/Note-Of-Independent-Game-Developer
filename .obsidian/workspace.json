@@ -75,8 +75,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -149,6 +148,9 @@
   },
   "active": "00bf889c76c5258e",
   "lastOpenFiles": [
+    "未命名.canvas",
+    "AI/机器学习.md",
+    "Pasted image 20240422150740.png",
     "Pasted image 20240419170113.png",
     "Pasted image 20240418161246.png",
     "Pasted image 20240418160635.png",
@@ -158,10 +160,7 @@
     "Pasted image 20240418153217.png",
     "Pasted image 20240418153131.png",
     "Pasted image 20240418152810.png",
-    "Pasted image 20240418150715.png",
-    "Pasted image 20240418150117.png",
     "AI/ai语音.md",
-    "AI/机器学习.md",
     "GameDesign/RTS的数值平衡.md",
     "AI/gpt咒术.md",
     "GameDesign/杀戮尖塔.md",
