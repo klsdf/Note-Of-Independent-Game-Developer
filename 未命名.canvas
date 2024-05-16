@@ -1,4 +1,16 @@
 {
-	"nodes":[],
-	"edges":[]
+	"nodes":[
+		{"id":"bfb86d3f9b959abc","x":-480,"y":-160,"width":250,"height":160,"type":"text","text":"体验来源：帝国时代自动兵工厂\n1. 自动产出士兵\n2. 士兵自动攻击\n\n"},
+		{"id":"b43baaf4e7c7f4e1","x":-488,"y":96,"width":250,"height":184,"type":"text","text":"体验\n1. 不用守家的RTS，基地可以移动，把探索和发展结合"},
+		{"id":"cd6791a7f930237b","x":-100,"y":-308,"width":440,"height":296,"color":"5","type":"text","text":"机制\n1. 玩家身边拥有兵营，兵营自动产生士兵\n3. 产生出来的士兵会自动寻找敌人的基地，并攻击敌人"},
+		{"id":"c29f82a3f4d8affe","type":"text","text":"机制\n1. 玩家可以移动基地\n2. 和RTS一样，拥有经济，科技，军事三个核心部分","x":-100,"y":40,"width":440,"height":296,"color":"5"},
+		{"id":"6c85aadbdd7a93b6","x":520,"y":40,"width":440,"height":520,"type":"text","text":"问题\n1. 如果没有经济采集系统，那么经济系统->军事，是一个单向的过程。强大的军事无法带来强大的经济。而且要是引入了防御体系，增加防御塔，那么前期防御窝在家里的收益会非常高。\n2. 如果保留经济采集系统，前期可以鼓励探索地图。但是因为本游戏并不支持微操，也就是说无法完成派遣农民采集的工作。只能玩家自己去采集。导致经济的增长非常有限。基本上全靠自己手动赚钱。"},
+		{"id":"92699c9c91cbfcfc","x":1292,"y":164,"width":468,"height":476,"type":"text","text":"解决\n1. 可以让造兵不要钱，只是兵工厂收费。\n2. 经济来源是士兵的死亡。死亡士兵的数量越多，获得的钱就越多。可以鼓励玩家多造兵工厂。相当于把经济和军事绑定了。\n3. 击败敌人和自己士兵死亡都会爆金币\n4. 同时为了防止防御策略的收益过高，导致前期根本不造兵营，只造防御塔。~自己士兵死亡时，会掉落100%的金币，而击杀敌人会掉落50%~"}
+	],
+	"edges":[
+		{"id":"184e17c561bcdf94","fromNode":"bfb86d3f9b959abc","fromSide":"right","toNode":"cd6791a7f930237b","toSide":"left"},
+		{"id":"0dae649760abcabf","fromNode":"b43baaf4e7c7f4e1","fromSide":"right","toNode":"c29f82a3f4d8affe","toSide":"left"},
+		{"id":"7ae1615637e0f59a","fromNode":"c29f82a3f4d8affe","fromSide":"right","toNode":"6c85aadbdd7a93b6","toSide":"left"},
+		{"id":"6f2a03b70875b2a4","fromNode":"6c85aadbdd7a93b6","fromSide":"right","toNode":"92699c9c91cbfcfc","toSide":"left"}
+	]
 }

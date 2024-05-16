@@ -11,15 +11,31 @@
             "id": "00bf889c76c5258e",
             "type": "leaf",
             "state": {
+              "type": "canvas",
+              "state": {
+                "file": "未命名.canvas",
+                "viewState": {
+                  "x": -39.38202569883498,
+                  "y": -56.98243181807004,
+                  "zoom": -0.6666666666666663
+                }
+              }
+            }
+          },
+          {
+            "id": "10720a0952243a41",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "GameDesign/冬之旅.md",
+                "file": "游戏史/未命名.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -71,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GameDesign/冬之旅.md"
+                "file": "游戏史/未命名.md"
               }
             }
           }
@@ -95,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GameDesign/冬之旅.md",
+                "file": "游戏史/未命名.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GameDesign/冬之旅.md",
+                "file": "游戏史/未命名.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,8 +162,14 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "00bf889c76c5258e",
+  "active": "c4c8a921720ece7c",
   "lastOpenFiles": [
+    "游戏史",
+    "未命名.canvas",
+    "游戏史/未命名.md",
+    "设计.md",
+    "未命名 1.canvas",
+    "GameDesign/冬之旅.md",
     "GameDesign/点积在视觉小说中的运用.md",
     "Develop/Unity脚本.md",
     "Develop/unity代码模板.md",
@@ -190,11 +212,6 @@
     "前端/WEB后端开发/Linux/Linux.md",
     "前端/WEB前端开发/VUE.js/项目/项目实战.md",
     "前端/WEB前端开发/微信小程序/微信小程序.md",
-    "前端/WEB前端开发/期末考试/期末考试.md",
-    "前端/WEB前端开发/web课设/课设.md",
-    "前端/WEB前端开发/XML/XML.md",
-    "前端/WEB前端开发/WebGL和canvas/pixi.md",
-    "未命名.canvas",
     "GameDesign/未命名.canvas"
   ]
 }
