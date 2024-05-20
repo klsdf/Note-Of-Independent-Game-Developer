@@ -8,34 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "00bf889c76c5258e",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "未命名.canvas",
-                "viewState": {
-                  "x": -39.38202569883498,
-                  "y": -56.98243181807004,
-                  "zoom": -0.6666666666666663
-                }
-              }
-            }
-          },
-          {
             "id": "10720a0952243a41",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "游戏史/付费史.md",
+                "file": "游戏史/中国游戏付费史.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -87,11 +71,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "游戏史/付费史.md"
+                "file": "游戏史/中国游戏付费史.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -111,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "游戏史/付费史.md",
+                "file": "游戏史/中国游戏付费史.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "游戏史/付费史.md",
+                "file": "游戏史/中国游戏付费史.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -164,8 +149,9 @@
   },
   "active": "10720a0952243a41",
   "lastOpenFiles": [
+    "未命名.canvas",
+    "游戏史/中国游戏付费史.md",
     "游戏史/通史.md",
-    "游戏史/付费史.md",
     "设计.md",
     "游戏音乐/音乐/音乐欣赏/music/巴洛克时期/Neville Marriner,Academy of St. Martin in the Fields - Concerto for Violin and Strings in E major, Op.8, No.1, R.269 ＂La Primavera＂： I.Allegro.mp3",
     "GameDesign/未命名 1.md",
@@ -173,7 +159,6 @@
     "GameDesign/RTS的数值平衡.md",
     "GameDesign/UGC.md",
     "游戏史",
-    "未命名.canvas",
     "未命名 1.canvas",
     "GameDesign/冬之旅.md",
     "GameDesign/点积在视觉小说中的运用.md",
@@ -211,7 +196,6 @@
     "前端/WEB后端开发/SQL/img/image-20200901101148598.png",
     "前端/WEB后端开发/SQL/img/image-20200915181749212.png",
     "前端/WEB后端开发/SQL/安装与配置.md",
-    "前端/WEB后端开发/SQL/SQL.md",
     "GameDesign/未命名.canvas"
   ]
 }
