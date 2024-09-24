@@ -2166,6 +2166,128 @@ public class GPTDialog : MonoBehaviour
 
 
 
+# 跨窗口通信
+
+
+
+```c#
+using System.IO.MemoryMappedFiles;
+using System.Text;
+using UnityEngine;
+
+public class MemoryMappedServer : MonoBehaviour
+{
+    void Start()
+    {
+        
+        MemoryMappedFile mmf = MemoryMappedFile.CreateNew("sharedMemory", 1024);
+        using (var stream = mmf.CreateViewStream())
+        {
+            byte[] message = Encoding.ASCII.GetBytes("Hello from Server");
+            stream.Write(message, 0, message.Length);
+        }
+    }
+}
+```
+
+
+
+
+```c#
+using System.IO.MemoryMappedFiles;
+using System.Text;
+using UnityEngine;
+using System.IO;
+
+using TMPro;
+
+public class SharedMemoryManager : MonoBehaviour
+{
+    private MemoryMappedFile mmf;
+    private const string sharedMemoryName = "sharedMemory";
+    private const int memorySize = 1024;
+
+
+    public TMP_Text mP_Text;
+
+    // 尝试打开现有的共享内存
+    void Start()
+    {
+        
+
+        try
+        {
+            // 尝试打开已经存在的共享内存
+            mmf = MemoryMappedFile.OpenExisting(sharedMemoryName);
+            Debug.Log("Shared memory exists, reading from it.");
+            ReadSharedMemory();
+        }
+        catch (FileNotFoundException)
+        {
+            // 如果没有找到共享内存，创建新的
+            Debug.Log("Shared memory not found, creating new one.");
+            mmf = MemoryMappedFile.CreateNew(sharedMemoryName, memorySize);
+            WriteToSharedMemory("Hello from new instance");
+        }
+    }
+
+    // 从共享内存读取数据
+    void ReadSharedMemory()
+    {
+        using (var stream = mmf.CreateViewStream())
+        {
+            byte[] buffer = new byte[memorySize];
+            stream.Read(buffer, 0, buffer.Length);
+            string message = Encoding.ASCII.GetString(buffer).TrimEnd('\0');
+            //Debug.Log("Read from shared memory: " + message);
+            mP_Text.text = message;
+        }
+    }
+
+    // 写入数据到共享内存
+    void WriteToSharedMemory(string message)
+    {
+        using (var stream = mmf.CreateViewStream())
+        {
+            byte[] buffer = Encoding.ASCII.GetBytes(message);
+            stream.Write(buffer, 0, buffer.Length);
+        }
+    }
+
+    // 释放共享内存
+    void OnDestroy()
+    {
+        if (mmf != null)
+        {
+            mmf.Dispose();
+        }
+    }
+}
+```
+
+
+
+
+ 
+```c#
+using System.IO.MemoryMappedFiles;
+using System.Text;
+using UnityEngine;
+
+public class MemoryMappedClient : MonoBehaviour
+{
+    void Start()
+    {
+        MemoryMappedFile mmf = MemoryMappedFile.OpenExisting("sharedMemory");
+        using (var stream = mmf.CreateViewStream())
+        {
+            byte[] buffer = new byte[1024];
+            stream.Read(buffer, 0, buffer.Length);
+            Debug.Log(Encoding.ASCII.GetString(buffer));
+        }
+    }
+}
+```
 
 
 # Mesh编程

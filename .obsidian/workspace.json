@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "游戏史/中国游戏付费史.md",
+                "file": "Develop/unity代码模板.md",
                 "mode": "source",
                 "source": false
               }
@@ -71,11 +71,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "游戏史/中国游戏付费史.md"
+                "file": "Develop/unity代码模板.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -95,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "游戏史/中国游戏付费史.md",
+                "file": "Develop/unity代码模板.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "游戏史/中国游戏付费史.md",
+                "file": "Develop/unity代码模板.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,18 +139,18 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
     }
   },
   "active": "10720a0952243a41",
   "lastOpenFiles": [
-    "游戏史/通史.md",
     "游戏史/中国游戏付费史.md",
+    "游戏史/通史.md",
     "未命名.canvas",
     "设计.md",
     "游戏音乐/音乐/音乐欣赏/music/巴洛克时期/Neville Marriner,Academy of St. Martin in the Fields - Concerto for Violin and Strings in E major, Op.8, No.1, R.269 ＂La Primavera＂： I.Allegro.mp3",
