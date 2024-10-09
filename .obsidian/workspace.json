@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "00bf889c76c5258e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "AI/AI绘画/ai.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "a8d01beadf96f8db",
             "type": "leaf",
             "state": {
@@ -83,11 +71,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AI/AI绘画/ai.md"
+                "file": "Develop/渲染/shader.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -107,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AI/AI绘画/ai.md",
+                "file": "Develop/渲染/shader.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AI/AI绘画/ai.md",
+                "file": "Develop/渲染/shader.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,16 +139,30 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
     }
   },
-  "active": "00bf889c76c5258e",
+  "active": "b79b0f9494d05308",
   "lastOpenFiles": [
+    "Develop/渲染管线.md",
+    "Develop/渲染/shader.md",
+    "Develop/unity脚本模板.md",
+    "Develop/渲染/shader graph.md",
+    "Develop/Unity脚本.md",
+    "Develop/unity代码模板.md",
+    "Develop/Unity编辑器开发.md",
+    "Develop/c sharp.md",
+    "Develop/图形学.md",
+    "Develop/安卓开发.md",
+    "Develop/img/实验作业/image-20220607225243456.png",
+    "Develop/img/实验作业/image-20220607225146274.png",
+    "Develop/渲染管线.assets/image-20240830225953308.png",
+    "AI/AI绘画/ai.md",
     "设计.md",
     "游戏史/通史.md",
     "游戏史/中国游戏付费史.md",
@@ -174,26 +177,14 @@
     "AI/前向传播.py",
     "AI/test.py",
     "AI/2层的例子.py",
-    "Develop/渲染/shader.md",
-    "AI/AI绘画/ai.md",
-    "Develop/渲染/shader graph.md",
-    "Develop/渲染管线.md",
-    "Develop/图形学.md",
-    "Develop/安卓开发.md",
     "Develop/渲染管线.assets/image-20240831181840659.png",
     "Develop/渲染管线.assets/image-20240831174309147.png",
-    "Develop/渲染管线.assets/image-20240831171639510.png",
-    "Develop/渲染管线.assets/image-20240830231500284.png",
-    "Develop/渲染管线.assets/image-20240830225953308.png",
     "Develop/渲染管线.assets",
     "Develop/图形学.assets",
     "Develop/img/图形学",
     "Develop/img/实验作业",
     "Develop/img",
-    "Develop/c sharp.md",
     "Develop/渲染",
-    "Develop/unity代码模板.md",
-    "Develop/Unity编辑器开发.md",
     "markdown/markdown.md",
     "GameDesign/RPG游戏调研.md",
     "GameDesign/二次元手游.md",
@@ -206,8 +197,6 @@
     "GameDesign/点积在视觉小说中的运用.md",
     "AI/ai语音.md",
     "GameDesign/未命名 1.md",
-    "GameDesign/游戏与人 2.md",
-    "GameDesign/UGC.md",
     "GameDesign/未命名.canvas"
   ]
 }
