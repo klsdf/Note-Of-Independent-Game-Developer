@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Music/和声学/和声学.md",
+                "file": "Art/游戏画风类型.md",
                 "mode": "source",
                 "source": false
               }
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Music/和声学/和声学.md"
+                "file": "Art/游戏画风类型.md"
               }
             }
           }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Music/和声学/和声学.md",
+                "file": "Art/游戏画风类型.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Music/和声学/和声学.md",
+                "file": "Art/游戏画风类型.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,8 +146,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c4c8a921720ece7c",
+  "active": "a8d01beadf96f8db",
   "lastOpenFiles": [
+    "设计.md",
+    "Art/游戏画风类型.md",
+    "Art",
+    "Pasted image 20240418114841.png",
+    "Music/和声学/和声学.md",
     "Music/和声学/和弦.md",
     "Music/基本乐理.md",
     "Develop/渲染/shader.md",
@@ -164,10 +169,9 @@
     "Develop/img/实验作业/image-20220607225146274.png",
     "Develop/渲染管线.assets/image-20240830225953308.png",
     "AI/AI绘画/ai.md",
-    "设计.md",
-    "游戏史/通史.md",
-    "游戏史/中国游戏付费史.md",
-    "游戏史",
+    "HistoryOfVideoGames/通史.md",
+    "HistoryOfVideoGames/中国游戏付费史.md",
+    "HistoryOfVideoGames",
     "未命名.canvas",
     "未命名 1.canvas",
     "Pasted image 20240430144520.png",
@@ -179,13 +183,11 @@
     "AI/test.py",
     "AI/2层的例子.py",
     "Develop/渲染管线.assets/image-20240831181840659.png",
-    "Develop/渲染管线.assets/image-20240831174309147.png",
     "Develop/渲染管线.assets",
     "Develop/图形学.assets",
     "Develop/img/图形学",
     "Develop/img/实验作业",
     "Develop/img",
-    "Develop/渲染",
     "markdown/markdown.md",
     "GameDesign/RPG游戏调研.md",
     "GameDesign/二次元手游.md",
@@ -194,8 +196,6 @@
     "GameDesign/音游中的音符命名.md",
     "GameDesign/数值公式.md",
     "GameDesign/杀戮尖塔.md",
-    "GameDesign/冬之旅.md",
-    "GameDesign/点积在视觉小说中的运用.md",
     "GameDesign/未命名.canvas"
   ]
 }
