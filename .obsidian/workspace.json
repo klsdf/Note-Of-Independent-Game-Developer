@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Develop/渲染/shader.md",
+                "file": "Music/和声学/和声学.md",
                 "mode": "source",
                 "source": false
               }
@@ -71,12 +71,11 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Develop/渲染/shader.md"
+                "file": "Music/和声学/和声学.md"
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -96,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Develop/渲染/shader.md",
+                "file": "Music/和声学/和声学.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Develop/渲染/shader.md",
+                "file": "Music/和声学/和声学.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,10 +146,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b79b0f9494d05308",
+  "active": "c4c8a921720ece7c",
   "lastOpenFiles": [
-    "Develop/渲染管线.md",
+    "Music/和声学/和弦.md",
+    "Music/基本乐理.md",
     "Develop/渲染/shader.md",
+    "Develop/渲染管线.md",
     "Develop/unity脚本模板.md",
     "Develop/渲染/shader graph.md",
     "Develop/Unity脚本.md",
@@ -195,8 +196,6 @@
     "GameDesign/杀戮尖塔.md",
     "GameDesign/冬之旅.md",
     "GameDesign/点积在视觉小说中的运用.md",
-    "AI/ai语音.md",
-    "GameDesign/未命名 1.md",
     "GameDesign/未命名.canvas"
   ]
 }
