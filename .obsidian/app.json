@@ -1,4 +1,5 @@
 {
   "showLineNumber": true,
-  "attachmentFolderPath": "./asserts"
+  "attachmentFolderPath": "./asserts",
+  "alwaysUpdateLinks": true
 }
