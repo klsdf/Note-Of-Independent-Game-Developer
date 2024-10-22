@@ -1673,11 +1673,6 @@ public string[] text;
 ```
 
 
-
-### 
-
-
-
 ## 修改editor
 
 
@@ -1694,8 +1689,6 @@ public string[] text;
 | [ContextMenu("执行函数")]                                    |      | 为挂载脚本的物体的Inspector界面脚本添加一个脚本右键选项,点击执行方法内的逻辑 |
 
 
-
-## 
 
 ## 增加标题
 
