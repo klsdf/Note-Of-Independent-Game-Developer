@@ -246,6 +246,50 @@ obj1.transform.SetParent(obj2.transform);
 
 
 
+# 物体的查找与获取
+
+
+
+- 通过游戏物体的名字查找
+
+  ```c#
+  GameObject mainCameraGo= GameObject.Find("Main Camera");
+  ```
+
+- 通过游戏标签查找
+
+  ```c#
+  GameObject mainCameraGo = GameObject.FindGameObjectWithTag("MainCamera");
+  ```
+
+- 通过**组件类型**进行查找
+
+  ```c#
+  No2_EventFunction no2_EventFunction= GameObject.FindObjectOfType<No2_EventFunction>();
+  ```
+
+- 通过标签查找多个
+
+  ```c#
+  GameObject[] enemyGos= GameObject.FindGameObjectsWithTag("Enemy");
+  for (int i = 0; i < enemyGos.Length; i++)
+  {
+      Debug.Log("查找到的敌人游戏物体名称是："+enemyGos[i].name);
+  }
+  ```
+
+- 通过组件类型查找多个
+
+  ```c#
+  BoxCollider[] colliders= GameObject.FindObjectsOfType<BoxCollider>();
+  for (int i = 0; i < colliders.Length; i++)
+  {
+      Debug.Log("查找到的敌人碰撞器名称是：" + colliders[i].name);
+  }
+  ```
+
+  
+
 # Color
 
 Color接收的是一个[0,1]的值，需要用R，G，B，A四个值各自除以255
@@ -1506,7 +1550,7 @@ Time.timescale = 1
 
 
 
-# 
+
 
 # unity脚本的生命周期
 
