@@ -2,6 +2,209 @@
 2. 写一个静态方法
 
 
+# URP后处理
+
+```c#
+using UnityEngine;
+
+using UnityEngine.Rendering;
+
+using UnityEngine.Rendering.Universal;
+
+  
+
+public class CustomFullScreenPassRendererFeature : ScriptableRendererFeature
+
+{
+
+    class CustomFullscreenPass : ScriptableRenderPass
+
+    {
+
+        public Material grayscaleMaterial;
+
+          private RTHandle m_TempRT;
+
+  
+
+        public CustomFullscreenPass(Material material, RenderPassEvent renderPassEvent)
+
+        {
+
+            grayscaleMaterial = material;
+
+            this.renderPassEvent = renderPassEvent;
+
+        }
+
+  
+
+        public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
+
+        {
+
+            CommandBuffer cmd = CommandBufferPool.Get("自定义后处理");
+
+  
+
+            RenderTargetIdentifier source = renderingData.cameraData.renderer.cameraColorTargetHandle;
+
+            cmd.Blit(source, source, grayscaleMaterial);
+
+  
+
+            context.ExecuteCommandBuffer(cmd);
+
+            CommandBufferPool.Release(cmd);
+
+        }
+
+    }
+
+  
+
+    public Material grayscaleMaterial;
+
+    CustomFullscreenPass grayscalePass;
+
+    public RenderPassEvent renderPassEvent = RenderPassEvent.AfterRendering;
+
+  
+
+    public override void Create()
+
+    {
+
+        grayscalePass = new CustomFullscreenPass(grayscaleMaterial, renderPassEvent);
+
+    }
+
+  
+
+    public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData)
+
+    {
+
+        if (grayscaleMaterial != null)
+
+        {
+
+            renderer.EnqueuePass(grayscalePass);
+
+        }
+
+    }
+
+}
+```
+
+
+
+测试的shader
+```shader
+Shader "Hidden/RedTintPostProcess"
+
+{
+
+   Properties
+
+    {
+
+        _Color("Color", Color) = (1,0,0,1)
+
+    }
+
+    SubShader
+
+    {
+
+        Tags { "RenderType"="Transparent" "Queue"="Transparent" }
+
+  
+
+        Pass
+
+        {
+
+            Name "RedTint"
+
+            ZTest Always Cull Off ZWrite Off
+
+            Blend SrcAlpha OneMinusSrcAlpha  // 添加混合模式
+
+            HLSLPROGRAM
+
+            #pragma vertex VertDefault
+
+            #pragma fragment FragRedTint
+
+            #include "UnityCG.cginc"
+
+  
+
+            struct appdata_t
+
+            {
+
+                float4 vertex : POSITION;
+
+            };
+
+  
+
+            struct v2f
+
+            {
+
+                float4 pos : SV_POSITION;
+
+                float2 uv : TEXCOORD0;
+
+            };
+
+  
+
+            v2f VertDefault(appdata_t v)
+
+            {
+
+                v2f o;
+
+                o.pos = UnityObjectToClipPos(v.vertex);
+
+                o.uv = v.vertex.xy * 0.5 + 0.5;
+
+                return o;
+
+            }
+
+  
+
+            sampler2D _MainTex;
+
+            float4 _Color;
+
+            fixed4 FragRedTint(v2f i) : SV_Target
+
+            {
+
+                fixed4 color = tex2D(_MainTex, i.uv);
+
+                return lerp(color, _Color, _Color.a);
+
+            }
+
+            ENDHLSL
+
+        }
+
+    }
+
+}
+
+```
+
+
 
 
 
