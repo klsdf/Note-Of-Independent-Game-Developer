@@ -4,7 +4,6 @@ GLSL shader语言用于OpenGL
 HLSL shader语吉用于DirectX
 CG是跨平台的，nvidia开发的
 
-
 # 第一个Shader
 
 
