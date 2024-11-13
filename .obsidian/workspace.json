@@ -97,8 +97,7 @@
               "title": "Outline of unity代码模板"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -175,7 +174,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b79b0f9494d05308",
+  "active": "c4c8a921720ece7c",
   "lastOpenFiles": [
     "Develop/渲染/shader.md",
     "Art/游戏画风类型.md",

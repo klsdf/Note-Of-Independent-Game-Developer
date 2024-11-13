@@ -6,10 +6,160 @@
 
 ```c#
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+public class TestFeature : ScriptableRendererFeature
+{
+
+    class TestRenderPass : ScriptableRenderPass
+    {
+        public Material testMaterial;
+
+
+
+        private RTHandle m_TempRT;
+
+
+        public TestRenderPass(Material material, RenderPassEvent renderPassEvent)
+        {
+
+            testMaterial = material;
+            this.renderPassEvent = renderPassEvent;
+        }
+
+        public override void OnCameraSetup(CommandBuffer cmd, ref RenderingData renderingData)
+        {
+
+            if (m_TempRT == null)
+
+            {
+
+                m_TempRT = RTHandles.Alloc(renderingData.cameraData.cameraTargetDescriptor, name: "_TempRT");
+            }
+        }
+
+        public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
+        {
+            CommandBuffer cmd = CommandBufferPool.Get("测试的后处理");
+            RenderTargetIdentifier source = renderingData.cameraData.renderer.cameraColorTargetHandle;
+
+            cmd.Blit(source, m_TempRT, testMaterial);
+            cmd.Blit(m_TempRT, source);
+            context.ExecuteCommandBuffer(cmd);
+            CommandBufferPool.Release(cmd);
+        }
+
+        public override void OnCameraCleanup(CommandBuffer cmd)
+        {
+
+            if (m_TempRT != null)
+            {
+                RTHandles.Release(m_TempRT);
+                m_TempRT = null;
+            }
+        }
+    }
+
+    public Material testMaterial;
+    TestRenderPass testPass;
+
+    public RenderPassEvent renderPassEvent = RenderPassEvent.AfterRendering;
+
+    public override void Create()
+    {
+        testPass = new TestRenderPass(testMaterial, renderPassEvent);
+    }
+    public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData)
+    {
+        if (testMaterial != null)
+        {
+            renderer.EnqueuePass(testPass);
+        }
+    }
+}
+```
+
+
+
+测试的shader
+```shader
+Shader "Hidden/RedTintPostProcess"
+{
+    Properties
+    {
+        _Color("Color", Color) = (1,0,0,1)
+    }
+    SubShader
+    {
+        Tags 
+        { 
+            "RenderType"="Transparent" 
+            "Queue"="Transparent"
+            "RenderPipeline" = "UniversalPipeline"
+        }
+
+        Pass
+        {
+            Name "RedTint"
+            ZTest Always 
+            Cull Off 
+            ZWrite Off
+            Blend SrcAlpha OneMinusSrcAlpha
+
+            HLSLPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+
+            struct Attributes
+            {
+                float4 positionOS : POSITION;
+                float2 uv : TEXCOORD0;
+            };
+
+            struct Varyings
+            {
+                float4 positionCS : SV_POSITION;
+                float2 uv : TEXCOORD0;
+            };
+
+            TEXTURE2D(_MainTex);
+            SAMPLER(sampler_MainTex);
+            float4 _Color;
+
+            Varyings vert(Attributes input)
+            {
+                Varyings output;
+                output.positionCS = TransformObjectToHClip(input.positionOS.xyz);
+                output.uv = input.uv;
+                return output;
+            }
+
+            float4 frag(Varyings input) : SV_Target
+            {
+                float4 color = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, input.uv);
+                return lerp(color, _Color, _Color.a);
+            }
+            ENDHLSL
+        }
+    }
+}
+
+```
+
+
+
+
+
+带temp RT的
+``` c#
+using UnityEngine;
 
 using UnityEngine.Rendering;
 
 using UnityEngine.Rendering.Universal;
+
+using Beffio.Dithering;
 
   
 
@@ -17,17 +167,57 @@ public class CustomFullScreenPassRendererFeature : ScriptableRendererFeature
 
 {
 
+    [SerializeField]
+
+    [Header("调色板")]
+
+    private Palette _palette; // 用于抖动效果的颜色调色板
+
+    public Palette Palette { get { return _palette; } set { _palette = value; } }
+
+  
+  
+
+    [SerializeField]
+
+    [Header("抖动效果的模式/图案")]
+
+    private Pattern _pattern;// 抖动效果的模式/图案
+
+    public Pattern Pattern { get { return _pattern; } set { _pattern = value; } }
+
+  
+  
+  
+
+    [SerializeField]
+
+    [Header("自定义的抖动纹理")]
+
+    private Texture2D _patternTexture;// 自定义的抖动纹理
+
+    public Texture2D PatternTexture { get { return _patternTexture; } set { _patternTexture = value; } }
+
+  
+  
+
     class CustomFullscreenPass : ScriptableRenderPass
 
     {
 
         public Material grayscaleMaterial;
 
-          private RTHandle m_TempRT;
+        public Palette palette;
+
+        public Pattern pattern;
+
+        public Texture2D patternTexture;
 
   
 
-        public CustomFullscreenPass(Material material, RenderPassEvent renderPassEvent)
+        private RTHandle m_TempRT;
+
+        public CustomFullscreenPass(Material material, RenderPassEvent renderPassEvent, Palette palette, Pattern pattern, Texture2D patternTexture)
 
         {
 
@@ -35,9 +225,27 @@ public class CustomFullScreenPassRendererFeature : ScriptableRendererFeature
 
             this.renderPassEvent = renderPassEvent;
 
+            this.palette = palette;
+
+            this.pattern = pattern;
+
+            this.patternTexture = patternTexture;
+
         }
 
-  
+        public override void OnCameraSetup(CommandBuffer cmd, ref RenderingData renderingData)
+
+        {
+
+            if (m_TempRT == null)
+
+            {
+
+                m_TempRT = RTHandles.Alloc(renderingData.cameraData.cameraTargetDescriptor, name: "_TempRT");
+
+            }
+
+        }
 
         public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
 
@@ -49,13 +257,85 @@ public class CustomFullScreenPassRendererFeature : ScriptableRendererFeature
 
             RenderTargetIdentifier source = renderingData.cameraData.renderer.cameraColorTargetHandle;
 
-            cmd.Blit(source, source, grayscaleMaterial);
+  
+
+            /*
+
+  
+
+            测试部分
+
+            */
+
+  
+
+            if (palette == null || (pattern == null && patternTexture == null))
+
+            {
+
+                return;
+
+            }
+
+  
+
+            if (!palette.HasTexture || (patternTexture == null && !pattern.HasTexture))
+
+            {
+
+                return;
+
+            }
+
+  
+
+            Texture2D patTex = (pattern == null ? patternTexture : pattern.Texture);
+
+  
+
+            grayscaleMaterial.SetFloat("_PaletteColorCount", palette.MixedColorCount);
+
+            grayscaleMaterial.SetFloat("_PaletteHeight", palette.Texture.height);
+
+            grayscaleMaterial.SetTexture("_PaletteTex", palette.Texture);
+
+            grayscaleMaterial.SetFloat("_PatternSize", patTex.width);
+
+            grayscaleMaterial.SetTexture("_PatternTex", patTex);
+
+            /*
+
+  
+
+            测试结束
+
+            */
+
+            cmd.Blit(source, m_TempRT, grayscaleMaterial);
+
+            cmd.Blit(m_TempRT, source);
 
   
 
             context.ExecuteCommandBuffer(cmd);
 
             CommandBufferPool.Release(cmd);
+
+        }
+
+        public override void OnCameraCleanup(CommandBuffer cmd)
+
+        {
+
+            if (m_TempRT != null)
+
+            {
+
+                RTHandles.Release(m_TempRT);
+
+                m_TempRT = null;
+
+            }
 
         }
 
@@ -67,15 +347,16 @@ public class CustomFullScreenPassRendererFeature : ScriptableRendererFeature
 
     CustomFullscreenPass grayscalePass;
 
-    public RenderPassEvent renderPassEvent = RenderPassEvent.AfterRendering;
+    private RenderPassEvent renderPassEvent = RenderPassEvent.BeforeRenderingPostProcessing;
 
+  
   
 
     public override void Create()
 
     {
 
-        grayscalePass = new CustomFullscreenPass(grayscaleMaterial, renderPassEvent);
+        grayscalePass = new CustomFullscreenPass(grayscaleMaterial, renderPassEvent, Palette, Pattern, PatternTexture);
 
     }
 
@@ -97,113 +378,6 @@ public class CustomFullScreenPassRendererFeature : ScriptableRendererFeature
 
 }
 ```
-
-
-
-测试的shader
-```shader
-Shader "Hidden/RedTintPostProcess"
-
-{
-
-   Properties
-
-    {
-
-        _Color("Color", Color) = (1,0,0,1)
-
-    }
-
-    SubShader
-
-    {
-
-        Tags { "RenderType"="Transparent" "Queue"="Transparent" }
-
-  
-
-        Pass
-
-        {
-
-            Name "RedTint"
-
-            ZTest Always Cull Off ZWrite Off
-
-            Blend SrcAlpha OneMinusSrcAlpha  // 添加混合模式
-
-            HLSLPROGRAM
-
-            #pragma vertex VertDefault
-
-            #pragma fragment FragRedTint
-
-            #include "UnityCG.cginc"
-
-  
-
-            struct appdata_t
-
-            {
-
-                float4 vertex : POSITION;
-
-            };
-
-  
-
-            struct v2f
-
-            {
-
-                float4 pos : SV_POSITION;
-
-                float2 uv : TEXCOORD0;
-
-            };
-
-  
-
-            v2f VertDefault(appdata_t v)
-
-            {
-
-                v2f o;
-
-                o.pos = UnityObjectToClipPos(v.vertex);
-
-                o.uv = v.vertex.xy * 0.5 + 0.5;
-
-                return o;
-
-            }
-
-  
-
-            sampler2D _MainTex;
-
-            float4 _Color;
-
-            fixed4 FragRedTint(v2f i) : SV_Target
-
-            {
-
-                fixed4 color = tex2D(_MainTex, i.uv);
-
-                return lerp(color, _Color, _Color.a);
-
-            }
-
-            ENDHLSL
-
-        }
-
-    }
-
-}
-
-```
-
 
 
 
