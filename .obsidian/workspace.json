@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Develop/代码模板/unity代码模板.md",
+                "file": "独立游戏开发者路线.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "unity代码模板"
+              "title": "独立游戏开发者路线"
             }
           }
         ]
@@ -79,14 +79,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Develop/代码模板/unity代码模板.md"
+                "file": "独立游戏开发者路线.md"
               },
               "icon": "lucide-list",
-              "title": "unity代码模板 的大纲"
+              "title": "独立游戏开发者路线 的大纲"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -125,12 +124,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Develop/代码模板/unity代码模板.md",
+                "file": "独立游戏开发者路线.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "unity代码模板 的出链列表"
+              "title": "独立游戏开发者路线 的出链列表"
             }
           },
           {
@@ -164,8 +163,9 @@
       "publish:发布更改": false
     }
   },
-  "active": "b79b0f9494d05308",
+  "active": "bbd99a1afeeb58f2",
   "lastOpenFiles": [
+    "Develop/代码模板/unity代码模板.md",
     "Develop/代码模板/编辑器模板.md",
     "Develop/渲染/shader graph.md",
     "Develop/渲染管线.md",
@@ -174,7 +174,6 @@
     "Develop/代码模板/桌宠与窗口.md",
     "Develop/代码模板/文本效果.md",
     "设计.md",
-    "Develop/代码模板/unity代码模板.md",
     "Develop/代码模板/Meta效果.md",
     "Develop/代码模板/后处理效果.md",
     "Develop/代码模板/设计模式.md",
