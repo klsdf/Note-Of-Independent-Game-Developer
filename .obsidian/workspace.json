@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Develop/代码模板/桌宠与窗口.md",
+                "file": "GameDesign/喵吉托复盘经验.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "桌宠与窗口"
+              "title": "喵吉托复盘经验"
             }
           }
         ]
@@ -79,13 +79,14 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Develop/代码模板/桌宠与窗口.md"
+                "file": "GameDesign/喵吉托复盘经验.md"
               },
               "icon": "lucide-list",
-              "title": "桌宠与窗口 的大纲"
+              "title": "喵吉托复盘经验 的大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -124,12 +125,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Develop/代码模板/桌宠与窗口.md",
+                "file": "GameDesign/喵吉托复盘经验.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "桌宠与窗口 的出链列表"
+              "title": "喵吉托复盘经验 的出链列表"
             }
           },
           {
@@ -165,13 +166,16 @@
   },
   "active": "bbd99a1afeeb58f2",
   "lastOpenFiles": [
+    "Develop/代码模板/桌宠与窗口.md",
+    "GameDesign/喵吉托复盘经验.md",
+    "Develop/代码模板/设计模式.md",
+    "Develop/代码模板/后处理效果.md",
+    "GameDesign/冬之旅.md",
+    "GameDesign/音游中的音符命名.md",
     "Develop/代码模板/Meta效果.md",
     "Develop/代码模板/Unity后端.md",
     "Develop/代码模板/常用的控制器.md",
-    "Develop/代码模板/设计模式.md",
-    "Develop/代码模板/后处理效果.md",
     "Develop/代码模板/文本效果.md",
-    "Develop/代码模板/桌宠与窗口.md",
     "Develop/代码模板/未命名.md",
     "Develop/代码模板/unity代码模板.md",
     "Develop/代码模板/windows 代码.md",
@@ -200,9 +204,6 @@
     "Themes/images/Pasted image 20241213001536.png",
     "Themes/images",
     "Themes",
-    "Music/和声学/和弦.md",
-    "Music/和声学/和声学.md",
-    "Music/游戏音乐/音乐/配器法/配器法.md",
     "游戏设计框架",
     "游戏开发者路线.canvas",
     "未命名 2.canvas",
