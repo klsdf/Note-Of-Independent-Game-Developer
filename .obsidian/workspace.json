@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c986ba0a95fbe364",
+        "id": "9b51220a3ffea940",
         "type": "tabs",
         "children": [
           {
-            "id": "08b973c8e79a8231",
+            "id": "bbd99a1afeeb58f2",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -40,7 +40,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -70,7 +71,7 @@
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "书签"
+              "title": "Bookmarks"
             }
           },
           {
@@ -79,7 +80,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Develop/C Sharp/知识点.md"
+                "file": "Develop/C Sharp/知识点.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
               "title": "知识点 的大纲"
@@ -164,18 +168,17 @@
       "publish:发布更改": false
     }
   },
-  "active": "b79b0f9494d05308",
+  "active": "bbd99a1afeeb58f2",
   "lastOpenFiles": [
     "Develop/C Sharp/c sharp.md",
     "Develop/C Sharp/知识点.md",
-    "Develop/安卓开发.md",
+    "GameDesign/音游中的音符命名.md",
     "Develop/C Sharp",
     "GameDesign/喵吉托复盘经验.md",
     "Develop/代码模板/桌宠与窗口.md",
     "Develop/代码模板/设计模式.md",
     "Develop/代码模板/后处理效果.md",
     "GameDesign/冬之旅.md",
-    "GameDesign/音游中的音符命名.md",
     "Develop/代码模板/Meta效果.md",
     "Develop/代码模板/Unity后端.md",
     "Develop/代码模板/常用的控制器.md",
@@ -195,6 +198,7 @@
     "游戏设计框架/游戏设计框架.md",
     "GameDesign/未命名 1.md",
     "GameDesign/GMT理论.md",
+    "设计.md",
     "Themes/images/Pasted image 20241213010643.png",
     "Themes/images/Pasted image 20241213004350.png",
     "Themes/images/Pasted image 20241213010545.png",
