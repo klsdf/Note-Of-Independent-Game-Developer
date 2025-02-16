@@ -89,8 +89,7 @@
               "title": "知识点 的大纲"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -170,8 +169,15 @@
   },
   "active": "bbd99a1afeeb58f2",
   "lastOpenFiles": [
-    "Develop/C Sharp/c sharp.md",
+    "Develop/图形学.md",
+    "Music/和声学/和声学.md",
+    "独立游戏开发者路线.md",
+    "设计.md",
+    "未命名 2.canvas",
+    "游戏开发者路线.canvas",
+    "音乐.md",
     "Develop/C Sharp/知识点.md",
+    "Develop/C Sharp/c sharp.md",
     "GameDesign/音游中的音符命名.md",
     "Develop/C Sharp",
     "GameDesign/喵吉托复盘经验.md",
@@ -189,16 +195,11 @@
     "Develop/代码模板/编辑器模板.md",
     "Develop/渲染管线.md",
     "Develop/模板",
-    "Develop/图形学.md",
     "Develop/渲染/shader graph.md",
     "Develop/渲染/shader.md",
-    "独立游戏开发者路线.md",
     "markdown/markdown.md",
     "Develop/图形学.assets/image-20240830225953308.png",
     "游戏设计框架/游戏设计框架.md",
-    "GameDesign/未命名 1.md",
-    "GameDesign/GMT理论.md",
-    "设计.md",
     "Themes/images/Pasted image 20241213010643.png",
     "Themes/images/Pasted image 20241213004350.png",
     "Themes/images/Pasted image 20241213010545.png",
@@ -210,8 +211,6 @@
     "Themes/images",
     "Themes",
     "游戏设计框架",
-    "游戏开发者路线.canvas",
-    "未命名 2.canvas",
     "未命名.canvas",
     "Develop/代码模板",
     "Pasted image 20240418143039.png",
