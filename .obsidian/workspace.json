@@ -89,7 +89,8 @@
               "title": "防止ui穿透 的大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
