@@ -2680,37 +2680,27 @@ using UnityEngine.Localization;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using System;
 
-
-
 public enum TableType
 {
-    UI,//这里指代所有的静态文本
-    Story,//指代所有的剧情和物体描述相关文本
-    InnerWorld1,//世界1的ai文本
-    InnerWorld2,//世界2的ai文本
+    Card,
 }
-
 
 public class LocalizationManager : Singleton<LocalizationManager>
 {
-
     private StringTable tableStory;          //代码本地化表
-
-
     void Start()
     {
         if (LocalizationSettings.AvailableLocales.Locales.Count > 0)
         {
-            GetLocalizationTable();
+            GetLocalizationTable(TableType.Card);
         }
         else
         {
             LocalizationSettings.InitializationOperation.Completed += OnLocalizationInitialized;
         }
         LocalizationSettings.SelectedLocaleChanged += OnLocaleChanged;
-
-
     }
+
     void Update()
     {
         Debug.Log("当前语言：" + GetLocalizedString("测试"));
@@ -2729,7 +2719,8 @@ public class LocalizationManager : Singleton<LocalizationManager>
         if (handle.Status == AsyncOperationStatus.Succeeded)
         {
             Debug.Log("Localization initialized successfully!");
-            GetLocalizationTable();
+            //这里临时用一下Card
+            GetLocalizationTable(TableType.Card);
         }
         else
         {
@@ -2744,33 +2735,74 @@ public class LocalizationManager : Singleton<LocalizationManager>
     {
         print("切换语言：" + newLocale.Identifier.Code);
         LocalizationSettings.SelectedLocale = newLocale;
-        GetLocalizationTable();
+        //这里临时用一下Card
+        GetLocalizationTable(TableType.Card);
     }
 
     /// <summary>
     /// 获取本地化表
     /// </summary>
-    private void GetLocalizationTable()
+    private void GetLocalizationTable(TableType tableType)
     {
-        tableStory = LocalizationSettings.StringDatabase.GetTable("Story");
+        tableStory = LocalizationSettings.StringDatabase.GetTable(tableType.ToString());
     }
+
+
+
+
+    /// <summary>
+    /// 根据语言代码切换语言
+    /// </summary>
+    private void SwitchLanguage(string localeCode)
+    {
+        Locale newLocale = LocalizationSettings.AvailableLocales.GetLocale(localeCode);
+        if (newLocale != null)
+        {
+            OnLocaleChanged(newLocale);
+        }
+        else
+        {
+            Debug.LogError($"Locale with code {localeCode} not found.");
+        }
+    }
+
+
+
+
+////////////////////////////////////公共方法//////////////////////////////////////
 
     /// <summary>
     /// 获取本地化文本，是主要被外部调用的方法
+    /// 如果文本键值不存在或当前语言没有翻译，会自动添加到本地化表中
     /// </summary>
     public string GetLocalizedString(string key)
     {
         try
         {
-            return tableStory.GetEntry(key).GetLocalizedString();
+            var entry = tableStory.GetEntry(key);
+            if (entry == null)
+            {
+                // 如果条目不存在，添加新条目
+                var newEntry = tableStory.AddEntry(key, $"[待翻译] {key}");
+                Debug.LogWarning($"添加新的本地化键值: {key}");
+                return GetLocalizedString(key);
+            }
+
+            string localizedString = entry.GetLocalizedString();
+            if (string.IsNullOrEmpty(localizedString))
+            {
+                // 如果当前语言没有翻译，也添加待翻译标记
+                entry.Value = $"[待翻译为{LocalizationSettings.SelectedLocale.Identifier.Code}]{key}";
+                Debug.LogWarning($"键值 '{key}' 在当前语言({LocalizationSettings.SelectedLocale.Identifier.Code})下没有翻译，已添加待翻译标记");
+                return GetLocalizedString(key);
+            }
+            return localizedString;
         }
         catch (Exception e)
         {
-            Debug.LogException(e);
-            print($"{key} 有问题");
-            return null;
+            Debug.LogWarning($"本地化键值 '{key}' 处理时发生错误: {e.Message}");
+            return key; // 发生错误时返回原始文本
         }
-
     }
 
     /// <summary>
@@ -2796,165 +2828,7 @@ public class LocalizationManager : Singleton<LocalizationManager>
     {
         SwitchLanguage("en");
     }
-
-    /// <summary>
-    /// 根据语言代码切换语言
-    /// </summary>
-    private void SwitchLanguage(string localeCode)
-    {
-        Locale newLocale = LocalizationSettings.AvailableLocales.GetLocale(localeCode);
-        if (newLocale != null)
-        {
-            OnLocaleChanged(newLocale);
-        }
-        else
-        {
-            Debug.LogError($"Locale with code {localeCode} not found.");
-        }
-    }
 }
-using UnityEngine;
-using UnityEngine.Localization.Settings;
-using UnityEngine.Localization.Tables;
-using UnityEngine.Localization;
-using UnityEngine.ResourceManagement.AsyncOperations;
-using System;
-
-
-
-public enum TableType
-{
-    UI,//这里指代所有的静态文本
-    Story,//指代所有的剧情和物体描述相关文本
-    InnerWorld1,//世界1的ai文本
-    InnerWorld2,//世界2的ai文本
-}
-
-
-public class LocalizationManager : Singleton<LocalizationManager>
-{
-
-    private StringTable tableStory;          //代码本地化表
-
-
-    void Start()
-    {
-        if (LocalizationSettings.AvailableLocales.Locales.Count > 0)
-        {
-            GetLocalizationTable();
-        }
-        else
-        {
-            LocalizationSettings.InitializationOperation.Completed += OnLocalizationInitialized;
-        }
-        LocalizationSettings.SelectedLocaleChanged += OnLocaleChanged;
-
-
-    }
-    void Update()
-    {
-        Debug.Log("当前语言：" + GetLocalizedString("测试"));
-    }
-
-    void OnDestroy()
-    {
-        LocalizationSettings.SelectedLocaleChanged -= OnLocaleChanged;
-    }
-
-    /// <summary>
-    /// 本地化初始化完成
-    /// </summary>
-    private void OnLocalizationInitialized(AsyncOperationHandle<LocalizationSettings> handle)
-    {
-        if (handle.Status == AsyncOperationStatus.Succeeded)
-        {
-            Debug.Log("Localization initialized successfully!");
-            GetLocalizationTable();
-        }
-        else
-        {
-            Debug.LogError("Localization initialization failed.");
-        }
-    }
-
-    /// <summary>
-    /// 切换语言
-    /// </summary>
-    private void OnLocaleChanged(Locale newLocale)
-    {
-        print("切换语言：" + newLocale.Identifier.Code);
-        LocalizationSettings.SelectedLocale = newLocale;
-        GetLocalizationTable();
-    }
-
-    /// <summary>
-    /// 获取本地化表
-    /// </summary>
-    private void GetLocalizationTable()
-    {
-        tableStory = LocalizationSettings.StringDatabase.GetTable("Story");
-    }
-
-    /// <summary>
-    /// 获取本地化文本，是主要被外部调用的方法
-    /// </summary>
-    public string GetLocalizedString(string key)
-    {
-        try
-        {
-            return tableStory.GetEntry(key).GetLocalizedString();
-        }
-        catch (Exception e)
-        {
-            Debug.LogException(e);
-            print($"{key} 有问题");
-            return null;
-        }
-
-    }
-
-    /// <summary>
-    /// 切换到中文
-    /// </summary>
-    public void SwitchToChinese()
-    {
-        SwitchLanguage("zh");
-    }
-
-    /// <summary>
-    /// 切换到日文
-    /// </summary>
-    public void SwitchToJapanese()
-    {
-        SwitchLanguage("ja");
-    }
-
-    /// <summary>
-    /// 切换到英文
-    /// </summary>
-    public void SwitchToEnglish()
-    {
-        SwitchLanguage("en");
-    }
-
-    /// <summary>
-    /// 根据语言代码切换语言
-    /// </summary>
-    private void SwitchLanguage(string localeCode)
-    {
-        Locale newLocale = LocalizationSettings.AvailableLocales.GetLocale(localeCode);
-        if (newLocale != null)
-        {
-            OnLocaleChanged(newLocale);
-        }
-        else
-        {
-            Debug.LogError($"Locale with code {localeCode} not found.");
-        }
-    }
-}
-
-
 
 ```
 
@@ -3863,16 +3737,6 @@ public class ShakeView : MonoBehaviour
 }
 
 ```
-
-
-
-
-
-# 设计模式
-
-
-
-# MVC架构
 
 
 

@@ -1,5 +1,4 @@
 
-
 # SOLID设计原则
 
 ## 单一职责原则（Single Responsibility Principle, SRP）
@@ -79,8 +78,6 @@ public class AreaCalculator
 }
 
 ```
-
-
 
 
 
@@ -283,6 +280,145 @@ public class Archer
     }
 }
 
+```
+
+
+
+# 其它设计原则
+
+
+## DRY原则
+
+DRY（Don't Repeat Yourself）原则是一种软件开发原则，旨在减少代码重复，提高可维护性和可读性。它的核心思想是：**同一部分的知识或逻辑在代码中不应该重复，而应该被抽象成一个单一的、可复用的模块**。
+
+
+违反 DRY 原则
+
+```c#
+Console.WriteLine("User 1: John Doe, Age: 30");
+Console.WriteLine("User 2: Jane Doe, Age: 25");
+Console.WriteLine("User 3: Alice, Age: 28");
+```
+
+遵循 DRY 原则
+```c#
+
+void PrintUser(string name, int age)
+{
+    Console.WriteLine($"User: {name}, Age: {age}");
+}
+PrintUser("John Doe", 30);
+PrintUser("Jane Doe", 25);
+PrintUser("Alice", 28);
+```
+
+
+
+ **DRY vs WET**
+
+- **DRY（Don't Repeat Yourself）**：避免重复，提倡抽象和封装。
+- **WET（Write Everything Twice 或 We Enjoy Typing）**：代码中存在大量重复逻辑，导致维护困难。
+
+## 魔法数字（Magic Number）反模式
+
+
+**魔法数字（Magic Number）反模式** 指的是在代码中直接使用**没有明确意义的数值常量**，而不是使用具有描述性的变量或常量名称。这种做法会降低代码的可读性、可维护性，并可能导致难以理解的逻辑错误。
+
+❌ 违反魔法数字反模式的例子
+
+```c#
+double CalculateCircleArea(double radius)
+{
+    return 3.14159 * radius * radius;  // 这里的 3.14159 是魔法数字
+}
+
+```
+
+
+✅ 遵循最佳实践
+
+```c#
+const double PI = 3.14159;
+
+double CalculateCircleArea(double radius)
+{
+    return PI * radius * radius;  // 现在代码可读性更高
+}
+
+```
+
+
+
+## 什么是意大利面代码？（Spaghetti Code）
+
+**Spaghetti Code（面条代码）** 是用来形容**混乱、无结构的代码**，因为这种代码的逻辑像意大利面条一样纠缠在一起，难以理解和维护。因此，程序员用 **"Spaghetti Code"** 来比喻“杂乱无章的代码结构”。
+
+### ** 面条代码的典型特征**
+
+1. **没有结构化设计**
+    - 代码缺乏清晰的层次结构，没有遵循良好的设计模式。
+2. **大量全局变量**
+    - 依赖多个全局变量，导致不同函数之间相互影响，难以跟踪数据变化。
+3. **过长的方法和类**
+    - 一个方法可能包含数百行代码，没有合理拆分成更小的函数，使得代码难以阅读和调试。
+4. **缺乏注释和文档**
+    - 代码逻辑复杂且没有注释，即使是原作者，过一段时间后也可能无法理解代码的意图。
+5. **过多的 if/else 和嵌套循环**
+    - 逻辑控制混乱，深层嵌套导致代码可读性极差。
+6. **重复代码**
+    - 没有遵循 **DRY（Don't Repeat Yourself）** 原则，导致同样的逻辑在多个地方重复出现，维护时需要修改多个地方。
+
+
+❌ 违反最佳实践的面条代码示例
+```c#
+void ProcessOrder(string orderType, int quantity)
+{
+    if (orderType == "A")
+    {
+        if (quantity > 10)
+        {
+            Console.WriteLine("Large order for type A");
+        }
+        else
+        {
+            Console.WriteLine("Small order for type A");
+        }
+    }
+    else if (orderType == "B")
+    {
+        if (quantity > 10)
+        {
+            Console.WriteLine("Large order for type B");
+        }
+        else
+        {
+            Console.WriteLine("Small order for type B");
+        }
+    }
+    else if (orderType == "C")
+    {
+        if (quantity > 10)
+        {
+            Console.WriteLine("Large order for type C");
+        }
+        else
+        {
+            Console.WriteLine("Small order for type C");
+        }
+    }
+}
+
+```
+
+
+✅ 采用良好实践优化面条代码
+
+```c#
+void ProcessOrder(string orderType, int quantity)
+{
+    string size = quantity > 10 ? "Large" : "Small";
+    Console.WriteLine($"{size} order for type {orderType}");
+}
 ```
 
 
@@ -658,6 +794,9 @@ public class GameManager : MonoBehaviour
 
 - 本质上就是搞一个新通用的接口，让一个装饰器类实现这个接口。然后，把其它需要适配的对象传到装饰器类的构造函数里面就完事了。
 - ai中用的很多
+
+注意，在你自己写代码的时候，不要使用适配器！不要使用适配器！
+没必要自己给自己上难度。只有在迫不得已去统一一个接口的时候才需要这个模式。就比如koishi框架，为了兼容qq和飞书等平台的机器人就用了适配器。不同平台的机器人api和调用肯定不一样，但是对外的表现都是一样的。所以需要做装饰器。
 
 
 ```c#
@@ -3142,3 +3281,197 @@ public class 发布者 : MonoBehaviour
 ```
 
 
+
+## MVC
+
+
+虽然model用了事件，但是本质上还是model发送数据给了view
+
+
+```c#
+// 1. Model：管理数据
+public class HealthModel {
+    private int _currentHealth;
+    public int CurrentHealth => _currentHealth;
+
+    // 数据变化事件
+    public event Action<int> OnHealthChanged;
+
+    public HealthModel(int maxHealth) {
+        _currentHealth = maxHealth;
+    }
+
+    public void TakeDamage(int damage) {
+        _currentHealth -= damage;
+        OnHealthChanged?.Invoke(_currentHealth); // 通知数据变化
+    }
+}
+
+// 2. View：负责显示
+public class HealthView : MonoBehaviour {
+    [SerializeField] private Slider healthSlider;
+
+    // 外部调用此方法更新显示
+    public void UpdateHealthDisplay(int health) {
+        healthSlider.value = health;
+    }
+}
+
+// 3. Controller：处理输入和协调
+public class HealthController : MonoBehaviour {
+    private HealthModel _model;
+    private HealthView _view;
+
+    private void Start() {
+        _model = new HealthModel(100);
+        _view = GetComponent<HealthView>();
+        _model.OnHealthChanged += _view.UpdateHealthDisplay; // 绑定事件
+    }
+
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            _model.TakeDamage(10); // 输入触发 Model 修改
+        }
+    }
+}
+```
+
+
+
+## MVP
+
+这玩意彻底断了model和view的联系，所以说OnPlayerTakeDamage的时候，要手动更新model和view的更新，而mvc只用改model
+
+```c#
+// 1. Model：管理数据
+public class HealthModel {
+    private int _currentHealth;
+    public int CurrentHealth => _currentHealth;
+
+    public HealthModel(int maxHealth) {
+        _currentHealth = maxHealth;
+    }
+
+    public void TakeDamage(int damage) {
+        _currentHealth -= damage;
+    }
+}
+
+// 2. View：负责显示
+public class HealthView : MonoBehaviour {
+    [SerializeField] private Slider healthSlider;
+
+    // 外部调用此方法更新显示
+    public void UpdateHealthDisplay(int health) {
+        healthSlider.value = health;
+    }
+}
+
+// 3. Presenter：核心逻辑协调者
+public class HealthPresenter {
+    private HealthModel _model;
+    private HealthView _view;
+
+    public HealthPresenter(HealthModel model, HealthView view) {
+        _model = model;
+        _view = view;
+    }
+
+    // 处理逻辑并更新 View
+    public void OnPlayerTakeDamage(int damage) {
+        _model.TakeDamage(damage);
+        _view.UpdateHealthDisplay(_model.CurrentHealth); // 主动更新 View
+    }
+}
+
+// 4. MonoBehaviour 驱动输入（如 Unity 的脚本）
+public class PlayerInputHandler : MonoBehaviour {
+    [SerializeField] private HealthView healthView; // 通过 Inspector 绑定
+    private HealthPresenter _presenter;
+
+    private void Start() {
+        var model = new HealthModel(100);
+        _presenter = new HealthPresenter(model, healthView);
+    }
+
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            _presenter.OnPlayerTakeDamage(10); // 输入触发 Presenter
+        }
+    }
+}
+```
+
+
+
+
+
+## MVVC
+
+
+说白了是双向绑定的需求所衍生的。
+
+以角色血量系统为例，结合 Unity 的 `UniRx`（响应式编程库）实现数据绑定：
+
+
+```c#
+// 1. Model（与 MVC/MVP 相同）
+public class HealthModel {
+    public ReactiveProperty<int> CurrentHealth { get; } = new ReactiveProperty<int>(100);
+
+    public void TakeDamage(int damage) {
+        CurrentHealth.Value -= damage;
+    }
+}
+
+// 2. ViewModel：暴露可绑定属性
+public class HealthViewModel {
+    public ReactiveProperty<float> HealthNormalized { get; } = new ReactiveProperty<float>(1f);
+
+    public HealthViewModel(HealthModel model) {
+        // 将 Model 的 CurrentHealth 转换为进度条比例（0~1）
+        model.CurrentHealth
+            .Subscribe(health => HealthNormalized.Value = health / 100f)
+            .AddTo(disposables);
+    }
+
+    private CompositeDisposable disposables = new CompositeDisposable();
+}
+
+// 3. View：绑定到 ViewModel
+public class HealthView : MonoBehaviour {
+    [SerializeField] private Slider healthSlider;
+    private HealthViewModel _viewModel;
+
+    public void Initialize(HealthViewModel viewModel) {
+        _viewModel = viewModel;
+        // 绑定 ViewModel 的 HealthNormalized 到 Slider
+        _viewModel.HealthNormalized
+            .Subscribe(value => healthSlider.value = value)
+            .AddTo(this);
+    }
+}
+
+// 4. 初始化及驱动
+public class GameManager : MonoBehaviour {
+    private void Start() {
+        var model = new HealthModel();
+        var viewModel = new HealthViewModel(model);
+        var view = GetComponent<HealthView>();
+        view.Initialize(viewModel);
+    }
+
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            model.TakeDamage(10); // 修改 Model，View 自动更新
+        }
+    }
+}
+```
+
+
+## 领域驱动设计（DDD）
+
+
+
+# Actor模型
