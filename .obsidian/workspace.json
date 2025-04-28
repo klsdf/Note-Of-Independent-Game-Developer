@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "奇妙的笔记/书籍/书籍.md",
+                "file": "奇妙的笔记/MVC.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "书籍"
+              "title": "MVC"
             }
           }
         ]
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "奇妙的笔记/书籍/书籍.md",
+                "file": "奇妙的笔记/MVC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "书籍 的反向链接列表"
+              "title": "MVC 的反向链接列表"
             }
           },
           {
@@ -168,8 +168,9 @@
   },
   "active": "bbd99a1afeeb58f2",
   "lastOpenFiles": [
-    "奇妙的笔记/肉鸽游戏/肉鸽笔记.md",
     "奇妙的笔记/书籍/书籍.md",
+    "奇妙的笔记/MVC.md",
+    "奇妙的笔记/肉鸽游戏/肉鸽笔记.md",
     "奇妙的笔记/书籍",
     "奇妙的笔记/Ideal游戏/Ideal游戏.md",
     "奇妙的笔记/Ideal游戏",
@@ -210,7 +211,6 @@
     "Develop/代码模板/Meta效果.md",
     "Develop/代码模板/unity中的设计模式.md",
     "Develop/代码模板/Unity后端.md",
-    "Develop/代码模板/unity代码模板.md",
     "Develop/FrameWork",
     "未命名 2.canvas",
     "游戏开发者路线.canvas",
