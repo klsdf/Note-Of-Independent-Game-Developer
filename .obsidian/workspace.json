@@ -11,10 +11,14 @@
             "id": "ee6690181133db3a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Develop/代码模板/unity中的设计模式.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "unity中的设计模式"
             }
           }
         ]
@@ -76,12 +80,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Develop/代码模板/unity中的设计模式.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "unity中的设计模式 的大纲"
             }
           }
         ],
@@ -105,6 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Develop/代码模板/unity中的设计模式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +120,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "反向链接"
+              "title": "unity中的设计模式 的反向链接列表"
             }
           },
           {
@@ -157,14 +163,18 @@
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "publish:发布更改": false
+      "command-palette:打开命令面板": false
     }
   },
-  "active": "ee6690181133db3a",
+  "active": "b79b0f9494d05308",
   "lastOpenFiles": [
+    "Develop/Unity编辑器开发.md",
+    "Develop/Roslyn 分析器.md",
+    "Develop/渲染管线.md",
     "CE/内存结构.md",
+    "奇妙的笔记/运营.md",
     "奇妙的笔记/网站.md",
+    "奇妙的笔记/东方.md",
     "CE",
     "奇妙的笔记/MVC.md",
     "奇妙的笔记/《无限暖暖》笔记.md",
@@ -175,12 +185,9 @@
     "奇妙的笔记/asserts/Pasted image 20250430135244.png",
     "奇妙的笔记/asserts",
     "Develop/FrameWork/QFrameWork.md",
-    "Develop/Roslyn 分析器.md",
     "Develop/安卓开发.md",
     "Develop/图形学.md",
     "Develop/性能优化.md",
-    "Develop/渲染管线.md",
-    "Develop/Unity编辑器开发.md",
     "Develop/Unity脚本API.md",
     "Develop/代码模板/unity代码模板.md",
     "Develop/代码模板/Meta效果.md",
@@ -193,8 +200,6 @@
     "Develop/代码模板/编辑器模板.md",
     "Develop/代码模板/unity中的设计模式.md",
     "Develop/代码模板/Unity后端.md",
-    "奇妙的笔记/书籍/书籍.md",
-    "奇妙的笔记/肉鸽游戏/肉鸽笔记.md",
     "奇妙的笔记/书籍",
     "奇妙的笔记/Ideal游戏",
     "奇妙的笔记/Gal",
