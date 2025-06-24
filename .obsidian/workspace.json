@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "7dc3de0af7c365e8",
+        "id": "de9024c17f3ff3e2",
         "type": "tabs",
         "children": [
           {
-            "id": "ee6690181133db3a",
+            "id": "490a166a53597c31",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Develop/性能优化.md",
+                "file": "Develop/unity程序集/程序集打包.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "性能优化"
+              "title": "程序集打包"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#infinite-craft",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -71,7 +71,7 @@
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "Bookmarks"
+              "title": "书签"
             }
           },
           {
@@ -80,13 +80,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "游戏宣发和运营/游戏销量评估.md",
+                "file": "Develop/unity程序集/程序集打包.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "游戏销量评估 的大纲"
+              "title": "程序集打包 的大纲"
             }
           }
         ]
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Develop/性能优化.md",
+                "file": "Develop/unity程序集/程序集打包.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "性能优化 的反向链接列表"
+              "title": "程序集打包 的反向链接列表"
             }
           },
           {
@@ -165,57 +165,56 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "ee6690181133db3a",
+  "active": "490a166a53597c31",
   "lastOpenFiles": [
-    "Develop/图形学.md",
-    "Develop/性能优化.md",
-    "Develop/安卓开发.md",
-    "Develop/渲染管线.md",
+    "Develop/unity程序集/asserts/Pasted image 20250623182744.png",
+    "Develop/unity程序集/程序集打包.md",
     "Develop/Roslyn 分析器.md",
-    "游戏宣发和运营/游戏发行商.md",
-    "独立游戏开发者路线.md",
-    "游戏宣发和运营/steam销售额计算.md",
-    "奇妙的笔记/《happy game》.md",
-    "Pasted image 20250613134515.png",
-    "Pasted image 20250613134509.png",
-    "游戏宣发和运营/游戏宣发经验.md",
-    "游戏宣发和运营/steam后台页面数据.md",
-    "游戏宣发和运营/查数据网站.md",
-    "游戏宣发和运营/运营.md",
-    "游戏宣发和运营/游戏销量评估.md",
-    "奇妙的笔记/MVC.md",
-    "奇妙的笔记/网站.md",
-    "Pasted image 20250612135200.png",
-    "Pasted image 20250612135017.png",
-    "Pasted image 20250612135010.png",
-    "Pasted image 20250612135003.png",
-    "游戏理论/叙事理论.md",
-    "游戏理论",
-    "机制设计.md",
-    "README.md",
-    "奇妙的笔记/《无限暖暖》笔记.md",
-    "奇妙的笔记/东方.md",
-    "奇妙的笔记/完成度提高.md",
-    "Develop/代码模板/常用的控制器.md",
-    "Develop/代码模板/编辑器模板.md",
-    "Art/未命名.md",
-    "Art/游戏画风类型.md",
+    "All Your Base Are Belong To Us.md",
     "Pasted image 20250606120400.png",
-    "未命名.canvas",
-    "游戏宣发和运营",
-    "CE",
-    "奇妙的笔记/asserts/Pasted image 20250430135834.png",
-    "奇妙的笔记/asserts/Pasted image 20250430135403.png",
-    "奇妙的笔记/asserts/Pasted image 20250430135346.png",
-    "奇妙的笔记/asserts",
-    "奇妙的笔记/书籍",
-    "奇妙的笔记/Ideal游戏",
-    "奇妙的笔记/Gal",
-    "奇妙的笔记/AI产品",
-    "奇妙的笔记/肉鸽游戏",
-    "AI/asserts",
-    "未命名 2.canvas",
+    "Pasted image 20250612135003.png",
+    "Pasted image 20250612135010.png",
+    "Pasted image 20250612135017.png",
+    "Pasted image 20250612135200.png",
+    "Pasted image 20250613134509.png",
+    "Pasted image 20250613134515.png",
+    "README.md",
+    "Develop/unity程序集",
+    "Develop/性能优化.md",
+    "Develop/渲染管线.md",
+    "Develop/Unity编辑器开发.md",
+    "奇妙的笔记/websim小游戏/神秘有趣小游戏.md",
+    "奇妙的笔记/websim小游戏/asserts/Pasted image 20250624143442.png",
+    "奇妙的笔记/websim小游戏/asserts/Pasted image 20250624135205.png",
+    "奇妙的笔记/websim小游戏/asserts",
+    "奇妙的笔记/东方.md",
+    "未命名 1",
+    "奇妙的笔记/神秘小游戏平台.md",
+    "奇妙的笔记/websim小游戏",
+    "奇妙的笔记/网站.md",
+    "Develop/包体优化/包体优化.md",
+    "Develop/包体优化",
+    "Develop/单元测试/单元测试.md",
+    "Develop/unity程序集/asserts",
+    "奇妙的笔记/AI/AI产品/AI产品.md",
+    "Develop/单元测试",
+    "奇妙的笔记/AI/AI游戏/AI游戏.md",
+    "microinteractions.md",
+    "奇妙的笔记/AI/AI游戏/asserts",
+    "奇妙的笔记/AI/AI游戏",
+    "奇妙的笔记/AI",
+    "游戏设计框架/游戏设计框架.md",
+    "奇妙的笔记/肉鸽游戏/肉鸽笔记.md",
+    "游戏宣发和运营/适合发独立游戏的节日.md",
+    "游戏宣发和运营/steam销售额计算.md",
+    "游戏宣发和运营/运营.md",
+    "游戏宣发和运营/steam后台页面数据.md",
+    "游戏理论/叙事理论.md",
+    "宿醉idea.md",
     "游戏开发者路线.canvas",
+    "音乐.md",
+    "未命名 2.canvas",
+    "未命名.canvas",
     "GameDesign/未命名.canvas"
   ]
 }
