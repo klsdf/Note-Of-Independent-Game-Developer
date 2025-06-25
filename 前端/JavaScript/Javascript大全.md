@@ -6191,7 +6191,7 @@ ctx.globalAlpha = 0.2;
 ctx.lineWidth = 1; //默认宽度为1
 ```
 
-## 线帽
+。/## 线帽
 
 ```javascript
 ctx.lineWidth = 16;
@@ -6629,6 +6629,8 @@ function drawClock() {
 
 }
 ```
+
+
 
 ## 对话框
 
@@ -7677,6 +7679,7 @@ var a = [9000,100,200,300,400,500,600,7]
 var result = a.some(value=> value<10)
 console.log(result) //true
 ```
+
 
 ### flat [ES10]
 
