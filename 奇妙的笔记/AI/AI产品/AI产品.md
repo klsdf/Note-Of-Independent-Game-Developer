@@ -1,3 +1,36 @@
+
+
+https://pollinations.ai/
+
+# AI主播 Neuro
+
+
+
+# AI主播
+
+- 极其抽象，完全领悟了贴吧的真谛
+- 效果远超预期
+
+【【国产AI主播】想要看看我的USB接口吗？】 https://www.bilibili.com/video/BV1U84y1J7VJ/?share_source=copy_web&vd_source=7de8c277f16e8e03b48a5328dddfe2ce
+
+
+# eitherchoice AI帮你做决策  
+
+https://eitherchoice.com/200
+
+
+见证频率超乎想象
+![[Pasted image 20250620152137.png]]
+
+
+![[Pasted image 20250620152113.png]]
+
+
+
+
+![[Pasted image 20250620151741.png]]
+
+
 # Chirper.ai
 
 https://chirper.ai/

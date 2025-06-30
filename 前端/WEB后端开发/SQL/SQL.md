@@ -485,7 +485,7 @@ INSERT INTO studen(id)
 VALUES (NULL);	
 ```
 
-![image-20200914000111207](img/image-20200914000111207.png)
+![image-20200914000111207](image-20200914000111207.png)
 
 虽然很方便,但是也有要求的
 
@@ -541,7 +541,7 @@ WHERE user_name="用户名";
 TRUNCATE TABLE lolis;
 ```
 
-![image-20200913231752113](img/image-20200913231752113.png)
+![image-20200913231752113](image-20200913231752113.png)
 
 # DQL (数据查询语言)
 
@@ -901,7 +901,7 @@ RIGHT JOIN food
 ON favorite_food_id = food.id;
 ```
 
-![image-20200915181749212](img/image-20200915181749212.png)
+![image-20200915181749212](image-20200915181749212.png)
 
 看吧,这样就有了这个神秘的糖果了.
 
