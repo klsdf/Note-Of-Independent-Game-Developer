@@ -1,0 +1,236 @@
+{
+  "main": {
+    "id": "2fc22e343986e8e4",
+    "type": "split",
+    "children": [
+      {
+        "id": "6a6fb13f59949f24",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c30472a4c9867166",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "奇妙的笔记/神秘小游戏平台.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "神秘小游戏平台"
+            }
+          },
+          {
+            "id": "837f8b542a317c48",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "奇妙的笔记/网站/奇怪的独立游戏.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "奇怪的独立游戏"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "289622fef59cbb0b",
+    "type": "split",
+    "children": [
+      {
+        "id": "6fcd2d643855c222",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c4c8a921720ece7c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "4a10cd2ef3692b35",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "d7d481962bbd1559",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          },
+          {
+            "id": "b79b0f9494d05308",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "奇妙的笔记/网站/奇怪的独立游戏.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "奇怪的独立游戏 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 588.5
+  },
+  "right": {
+    "id": "8dfcd87bf909f162",
+    "type": "split",
+    "children": [
+      {
+        "id": "49ee7a07bfd442d8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3c595f1f060f6807",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "奇妙的笔记/网站/奇怪的独立游戏.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "奇怪的独立游戏 的反向链接列表"
+            }
+          },
+          {
+            "id": "537d4c0686be80e7",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Develop/代码模板/常用的控制器.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "常用的控制器 的出链列表"
+            }
+          },
+          {
+            "id": "d9bb370fdb3d7938",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 296.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "837f8b542a317c48",
+  "lastOpenFiles": [
+    "奇妙的笔记/网站/asserts/Pasted image 20250702105829.png",
+    "奇妙的笔记/网站/asserts",
+    "奇妙的笔记/编程游戏和网站/游戏化网站.md",
+    "奇妙的笔记/网站/奇怪的独立游戏.md",
+    "奇妙的笔记/网站/奇怪的独立游戏",
+    "奇妙的笔记/网站",
+    "奇妙的笔记/编程游戏和网站/asserts/Pasted image 20250702104754.png",
+    "奇妙的笔记/编程游戏和网站/asserts/Pasted image 20250702102732.png",
+    "奇妙的笔记/编程游戏和网站/asserts/Pasted image 20250702102018.png",
+    "奇妙的笔记/游戏黑话/游戏和互联网黑话.md",
+    "奇妙的笔记/游戏黑话",
+    "奇妙的笔记/AI/AI产品/AI产品.md",
+    "奇妙的笔记/AI/AI产品/asserts/Pasted image 20250701121821.png",
+    "奇妙的笔记/编程游戏和网站/asserts/Pasted image 20250701113902.png",
+    "奇妙的笔记/编程游戏和网站/asserts",
+    "特效/特效.md",
+    "奇妙的笔记/编程游戏和网站",
+    "奇妙的笔记/未命名.md",
+    "奇妙的笔记/神秘小游戏平台.md",
+    "特效",
+    "奇妙的笔记/美术展.md",
+    "宿醉idea.md",
+    "Music/基本乐理.md",
+    "Music/和声学/和弦.md",
+    "Music/和声学/和声学.md",
+    "AI/ai语音.md",
+    "AI/机器学习.md",
+    "AI/asserts/Pasted image 20240430144520.png",
+    "AI/asserts/Pasted image 20240418161246.png",
+    "AI/asserts/Pasted image 20240418144424.png",
+    "AI/asserts/Pasted image 20240418143340.png",
+    "AI/asserts/Pasted image 20240418114841.png",
+    "CE/内存结构.md",
+    "AI/ai聊天.md",
+    "游戏设计框架/游戏设计框架.md",
+    "游戏理论/叙事理论.md",
+    "Develop/坐标变换/unity坐标.md",
+    "前端/JavaScript/WebGl.md",
+    "Develop/坐标变换",
+    "前端/JavaScript/Javascript大全.md",
+    "TA/抖动算法.md",
+    "奇妙的笔记/AI/AI游戏/AI游戏.md",
+    "TA",
+    "Develop/图形学.md",
+    "Music/游戏音乐/コード理論.md",
+    "Develop/性能优化",
+    "游戏开发者路线.canvas",
+    "未命名 2.canvas",
+    "未命名.canvas",
+    "GameDesign/未命名.canvas"
+  ]
+}
