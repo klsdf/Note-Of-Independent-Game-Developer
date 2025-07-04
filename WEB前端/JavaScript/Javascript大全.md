@@ -7079,7 +7079,7 @@ new Foo().getName();//3
 <script defer src="./schedule.js"></script>
 ```
 
-![img](前端/JavaScript/img/ECMAScript/webp.webp)
+![img](WEB前端/JavaScript/img/ECMAScript/webp.webp)
 
 
 

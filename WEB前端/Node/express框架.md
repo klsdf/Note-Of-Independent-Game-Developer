@@ -270,7 +270,7 @@ app.use('/', homeRouter);
 
 此时点入http://127.0.0.1:3000/，就可以看到首页的欢迎界面了。
 
-![image-20201106183416400](前端/Node/img/image-20201106183416400.png)
+![image-20201106183416400](WEB前端/Node/img/image-20201106183416400.png)
 
 ## 路径问题
 
@@ -488,7 +488,7 @@ module.exports = router;
 
 http://127.0.0.1:3000/girls?id=2
 
-![image-20201106204935164](前端/Node/img/image-20201106204935164.png)
+![image-20201106204935164](WEB前端/Node/img/image-20201106204935164.png)
 
 # 用户登录与注册
 
