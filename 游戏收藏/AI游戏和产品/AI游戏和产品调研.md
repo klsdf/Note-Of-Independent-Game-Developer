@@ -185,7 +185,7 @@ https://www.whatbeatsrock.com/#google_vignette
 ## 《昭阳传》
 
 
-![[image.png]]
+![[游戏收藏/AI游戏和产品/asserts/image.png]]
 
 
 - 开发商：A I. X-factor Play    重生之我用AI做游戏
